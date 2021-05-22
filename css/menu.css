@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(197, 197, 197);
+}
+
+/*PORTADA CBTS 189 */
+
+.flexslider {
+    width: 100%;
+    position: relative;
+}
+
+.slides {
+    overflow: hidden;
+}
+
+.slides img {
+    width: 100%;
+}
+
+.slides, .flex-control-nav, .flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flex-control-nav {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    z-index: 999;
+}
+
+.flex-control-nav li {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.flex-control-nav li a {
+    display: block;
+    background: #0184a5;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    text-indent: -9999px;
+}
+
+.flex-control-nav li a:hover {
+    background: #00bef8;
+}
+
+.flex-control-nav li a.flex-active {
+    background: #ffffff;
+}
+
+.flex-direction-nav a {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.flex-direction-nav .flex-prev {
+    left: 0;
+}
+
+.flex-direction-nav .flex-next {
+    right: 0;
+}
+
+.flex-direction-nav a:before {
+    font-family: "flexslider-icon";
+    font-size: 40px;
+    display: inline-block;
+    content: '\f001';
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0, 59, 253, 0.3);
+}
+
+.flex-direction-nav a.flex-next:before {
+    content: '\f002';
+}
+
+.flex-caption p {
+    font-family: sans-serif;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+    font-size: 100%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.295);
+}
+
+.flex-caption h1 {
+    font-family: sans-serif;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+    font-size: 180%;
+    color: #00bef8;
+    font-weight: bold;
+    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.flex-caption button {
+    border: none;
+    position: absolute;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.219);
+    color: white;
+    background-color: linear-gradient(to left #00bef8, #0d92bb, #066886);
+    border: none;
+    top: 53%;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    right: 45%;
+    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.295);
+    transition: all 300ms;
+}
+
+.flex-caption button:hover {
+    transform: translateY(10px);
+    color: white;
+    background-color: #00bef8;
+    border: none;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev {
+    opacity: 0.7;
+    left: 10px;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev:hover {
+    opacity: 1;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next {
+    opacity: 0.7;
+    right: 10px;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next:hover {
+    opacity: 1;
+}
+
+/*RESPONSIVE CELULAR*/
+
+@media screen and (max-width:500px) and (min-width:50px) {
+    .flex-caption p {
+        font-family: sans-serif;
+        position: absolute;
+        top: 35%;
+        text-align: center;
+        width: 100%;
+        font-size: 10px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.295);
+    }
+    .flex-caption h1 {
+        font-family: sans-serif;
+        position: absolute;
+        top: 10%;
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+        color: #00bef8;
+        font-weight: bold;
+        text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.164);
+    }
+    .flex-caption button {
+        border: none;
+        position: absolute;
+        padding: 4px 10px;
+        color: white;
+        background-color: linear-gradient(to left #00bef8, #0d92bb, #066886);
+        border: none;
+        top: 52%;
+        font-size: 6px;
+        cursor: pointer;
+        border-radius: 10px;
+        right: 40%;
+        text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.295);
+        transition: all 300ms;
+    }
+    .flex-caption button:hover {
+        transform: translateY(4px);
+        color: white;
+        background-color: #00bef8;
+        border: none;
+        background-position: right;
+    }
+    .flex-control-nav li a {
+        display: block;
+        background: #0184a5;
+        width: 5px;
+        height: 5px;
+        border-radius: 12px;
+        text-indent: -9999px;
+        bottom: 50%;
+    }
+    .flex-control-nav li a:hover {
+        background: #00bef8;
+    }
+    .flex-control-nav li a.flex-active {
+        background: #ffffff;
+    }
+    .flex-direction-nav a {
+        display: block;
+        text-decoration: none;
+        position: absolute;
+        top: 30%;
+        z-index: 999;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    /*FIN DE PORTADA*/
+    /*Responsive 870*/
+}
+
+/*MENU DESPLEGABLE*/
+
+.navegacion {
+    width: 100%;
+}
+
+.navegacion nav {
+    width: 100%;
+    max-width: 100%;
+    background-color: #ffffff;
+    margin: 0px auto;
+    margin-right: 200px;
+}
+
+.navegacion nav ul {
+    list-style: none;
+    position: relative;
+}
+
+.navegacion nav>ul>li {
+    display: inline-block;
+}
+
+.navegacion nav>ul>li>a {
+    color: rgb(0, 136, 136);
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    padding: 10px 40px 4px 20px;
+}
+
+.navegacion nav>ul>li>a span {
+    font-size: 20px;
+    position: absolute;
+    bottom: -5px;
+    display: none;
+}
+
+.navegacion nav>ul>li:hover span {
+    display: block;
+}
+
+.navegacion nav ul li .submenu {
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    display: none;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.226);
+}
+
+.navegacion nav ul li:hover .submenu {
+    display: flex;
+}
+
+.navegacion nav ul li .submenu .submenu-items {
+    margin: 0 8px;
+}
+
+.navegacion nav ul li .submenu .submenu-items p {
+    font-weight: 600;
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.411);
+    margin-bottom: 10px;
+}
+
+.submenu-items ul a {
+    text-decoration: none;
+    color: #06546b;
+    margin: 5px 0;
+    font-weight: 700;
+}
+
+.submenu-items ul a:hover {
+    color: rgb(0, 174, 255);
+    border: solid 1px #0d92bb;
+    border-radius: 5px;
+}
+
+/*MENU DESPEGABLE FIN*/
+
+@media screen and (max-width:430px) and (min-width:240px) {
+    .navegacion nav>ul>li>a {
+        color: rgb(0, 136, 136);
+        text-decoration: none;
+        display: block;
+        font-weight: 600;
+        padding: 2px 0px 0px 10px;
+        font-size: 12px;
+    }
+    .navegacion nav>ul>li>a span {
+        font-size: 10px;
+        position: absolute;
+        bottom: -8px;
+        display: none;
+    }
+    .navegacion nav>ul>li:hover span {
+        display: block;
+    }
+    .navegacion nav ul li .submenu {
+        background: #fff;
+        padding: 10px;
+        position: absolute;
+        display: none;
+        font-size: 10px;
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.226);
+    }
+    .navegacion nav ul li:hover .submenu {
+        display: flex;
+    }
+    .navegacion nav ul li .submenu .submenu-items {
+        margin: 0 2px;
+    }
+    .navegacion nav ul li .submenu .submenu-items p {
+        font-weight: 600;
+        display: block;
+        padding-bottom: 2px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.411);
+        margin-bottom: 5px;
+    }
+    .submenu-items ul a {
+        text-decoration: none;
+        color: #06546b;
+        margin: 5px 0px;
+        font-weight: 700;
+        border: solid 0.0px #066886;
+    }
+    .submenu-items ul a:hover {
+        color: rgb(0, 174, 255);
+        border: solid 1px #0d92bb;
+        border-radius: 5px;
+    }
+}
