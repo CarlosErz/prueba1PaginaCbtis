@@ -89,13 +89,13 @@ body {
     font-family: "flexslider-icon";
     font-size: 40px;
     display: inline-block;
-    content: '\f001';
-    color: #fff;
-    text-shadow: 1px 1px 0 rgba(0, 59, 253, 0.3);
+    content: '\276E';
+    color: rgb(243, 243, 243);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.445);
 }
 
 .flex-direction-nav a.flex-next:before {
-    content: '\f002';
+    content: '\276F';
 }
 
 .flex-caption p {
@@ -120,6 +120,12 @@ body {
     color: #00bef8;
     font-weight: bold;
     text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.Calif a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
 }
 
 .flex-caption button {
@@ -326,6 +332,137 @@ body {
 }
 
 /*MENU DESPEGABLE FIN*/
+
+/*Tablet responsive*/
+
+@media screen and (max-width:1100px) and (min-width:430px) {
+    .flex-caption p {
+        font-family: sans-serif;
+        position: absolute;
+        top: 35%;
+        text-align: center;
+        width: 100%;
+        font-size: 10px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.295);
+    }
+    .flex-caption h1 {
+        font-family: sans-serif;
+        position: absolute;
+        top: 10%;
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+        color: #00bef8;
+        font-weight: bold;
+        text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.164);
+    }
+    .flex-caption button {
+        border: none;
+        position: absolute;
+        padding: 7px 20px;
+        color: white;
+        background: #0171a5;
+        border: none;
+        top: 52%;
+        right: 42%;
+        font-size: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 300ms;
+    }
+    .flex-caption button:hover {
+        transform: translateY(4px);
+        color: white;
+        background-color: #00bef8;
+        border: none;
+        background-position: right;
+    }
+    .flex-control-nav li a {
+        display: block;
+        background: #0184a5;
+        width: 7px;
+        height: 7px;
+        border-radius: 12px;
+        text-indent: -9999px;
+        bottom: 50%;
+    }
+    .flex-control-nav li a:hover {
+        background: #00bef8;
+    }
+    .flex-control-nav li a.flex-active {
+        background: #ffffff;
+    }
+    .flex-direction-nav a {
+        display: block;
+        text-decoration: none;
+        position: absolute;
+        top: 30%;
+        z-index: 999;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    .navegacion nav>ul>li>a {
+        color: rgb(0, 136, 136);
+        text-decoration: none;
+        display: block;
+        font-weight: 600;
+        padding: 2px 0px 0px 10px;
+        font-size: 15px;
+    }
+    .navegacion nav>ul>li>a span {
+        font-size: 10px;
+        position: absolute;
+        bottom: -8px;
+        display: none;
+    }
+    .navegacion nav>ul>li:hover span {
+        display: block;
+    }
+    .navegacion nav ul li .submenu {
+        background: #fff;
+        padding: 10px;
+        position: absolute;
+        display: none;
+        font-size: 13px;
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.226);
+    }
+    .navegacion nav ul li:hover .submenu {
+        display: flex;
+    }
+    .navegacion nav ul li .submenu .submenu-items {
+        margin: 0 2px;
+    }
+    .navegacion nav ul li .submenu .submenu-items p {
+        font-weight: 600;
+        display: block;
+        padding-bottom: 2px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.411);
+        margin-bottom: 5px;
+    }
+    .submenu-items ul a {
+        text-decoration: none;
+        color: #06546b;
+        margin: 5px 0px;
+        font-weight: 700;
+        border: solid 0.0px #066886;
+    }
+    .submenu-items ul a:hover {
+        color: rgb(0, 174, 255);
+        border: solid 1px #0d92bb;
+        border-radius: 5px;
+    }
+}
+
+/*Menu despegable celular  tamaño medio*/
 
 @media screen and (max-width:430px) and (min-width:240px) {
     .navegacion nav>ul>li>a {

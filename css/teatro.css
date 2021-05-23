@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+}
+
+section#slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+div#content-images-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div.image-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+h1#slider-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15em;
+    background: linear-gradient(0deg, rgb(166, 166, 166) 0%, rgba(255, 255, 255, 1) 32%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section#content {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+div.text-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+}
+
+.navegacion {
+    width: 100%;
+}
+
+.navegacion nav {
+    width: 100%;
+    max-width: 100%;
+    background-color: #ffffff;
+    margin: 0px auto;
+    margin-right: 200px;
+}
+
+.navegacion nav ul {
+    list-style: none;
+    position: relative;
+}
+
+.navegacion nav>ul>li {
+    display: inline-block;
+}
+
+.navegacion nav>ul>li>a {
+    color: rgb(0, 100, 158);
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    padding: 10px 40px 1px 20px;
+}
+
+.navegacion nav>ul>li>a span {
+    font-size: 20px;
+    position: absolute;
+    bottom: -5px;
+    display: none;
+}
+
+.navegacion nav>ul>li:hover span {
+    display: block;
+}
+
+.navegacion nav ul li .submenu {
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    display: none;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.226);
+}
+
+.navegacion nav ul li:hover .submenu {
+    display: flex;
+}
+
+.navegacion nav ul li .submenu .submenu-items {
+    margin: 0 10px 25px;
+}
+
+.navegacion nav ul li .submenu .submenu-items p {
+    font-weight: 600;
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.411);
+    margin-bottom: 10px;
+}
+
+.submenu-items ul a {
+    text-decoration: none;
+    color: #06546b;
+    margin: 10px 0px;
+    font-weight: 700;
+}
+
+.submenu-items ul a:hover {
+    color: rgb(0, 174, 255);
+    border: solid 1px #0d92bb;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:430px) and (min-width:240px) {
+    .navegacion nav>ul>li>a {
+        color: rgb(0, 72, 85);
+        text-decoration: none;
+        display: block;
+        font-weight: 600;
+        padding: 2px 20px 5px 10px;
+        font-size: 15px;
+    }
+    .navegacion nav>ul>li>a span {
+        font-size: 20px;
+        position: absolute;
+        bottom: -5px;
+        display: none;
+    }
+    .navegacion nav>ul>li:hover span {
+        display: block;
+    }
+    .navegacion nav ul li .submenu {
+        background: rgb(255, 255, 255);
+        padding: 20px;
+        position: absolute;
+        display: none;
+        font-size: 10px;
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.226);
+    }
+    .navegacion nav ul li:hover .submenu {
+        display: flex;
+    }
+    .navegacion nav ul li .submenu .submenu-items {
+        margin: 0 2px;
+    }
+    .navegacion nav ul li .submenu .submenu-items p {
+        font-weight: 600;
+        display: block;
+        padding-bottom: 2px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.411);
+        margin-bottom: 5px;
+    }
+    .submenu-items ul a {
+        text-decoration: none;
+        color: #06546b;
+        margin: 5px 0px;
+        font-weight: 700;
+        border: solid 0.0px #066886;
+    }
+    .submenu-items ul a:hover {
+        color: rgb(0, 174, 255);
+        border: solid 1px #0d92bb;
+        border-radius: 5px;
+    }
+    h1#slider-text {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5em;
+        background: linear-gradient(0deg, rgb(166, 166, 166) 0%, rgba(255, 255, 255, 1) 32%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    section#content {
+        width: 100%;
+        height: 100%;
+        background-color: #f0f0f0;
+    }
+    div.text-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .9;
+    }
+}
